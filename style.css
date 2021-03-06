@@ -1,4 +1,23 @@
-body {background-color:black; font-color: white; font: Arial}
-h1{color:grey; font: Verdana}
-maindiv{background-color:white; font-color:black; width:300px; padding:20px; border:25px; text-align:center }
+body 
+{
+  background-color:black; 
+  font-color: white; 
+  font: Arial
+}
+
+h1
+{
+  color:grey; 
+  font: Verdana
+}
+
+maindiv
+{
+  background-color:white; 
+  font-color:black;
+  width:300px; 
+  padding:20px; 
+  border:25px; 
+  text-align:center 
+}
 
