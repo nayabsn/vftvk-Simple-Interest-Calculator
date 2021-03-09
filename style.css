@@ -1,14 +1,14 @@
 body 
 {
   background-color:black; 
-  font-color: white; 
-  font: Arial
+  font-color: white;
+  font-family: arial;
 }
 
 h1
 {
-  color:grey; 
-  font: Verdana
+  color:grey;
+  font-family: verdana;
 }
 
 maindiv
@@ -18,6 +18,6 @@ maindiv
   width:300px; 
   padding:20px; 
   border:25px; 
-  text-align:center 
+  text-align:center; 
 }
 
