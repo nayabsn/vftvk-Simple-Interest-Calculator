@@ -1,10 +1,9 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 
 <html>
-    <link rel="stylesheet" href="style.css">
-    
     <head>
-        <script src="script.js"></script>
         <title> Simple Interest Calculator</title>
     </head>
     
@@ -13,11 +12,23 @@
             
         <h1>Simple Interest Calculator</h1>
 
-        Amount       <input type="number"  id="principal">  
+        Amount     <input type="number"  id="principal">  
             <br/>
-        Interest Rate        <input type="range" min="1" max="20" span id="10.25%" step="0.25" value="10.25" class="slider"></span>
             <br/>
-        No. of Years         <select id="years">
+            
+        Interest Rate        
+        
+        <div class = "rangeslider">
+            <br>
+            0% <input type="range" min="0" max="20" step="0.25" value="10.25" class="myslider" id="sliderRange" onchange="slider()"> 20%
+            <br/>
+            <p>Selected: <span id="out" ></span> % </p>
+        </div>
+        
+            <br/>
+            <br/>
+
+            No. of Years         <select id="years">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -31,13 +42,18 @@
             </select>
             <br/>
             <br/>
-        </div>
+               
+            <button onclick="compute()">Compute Interest</button>
+            <br/>
+        <br/>
+
+        <span id="result"> </span>
         
-        <button onclick="compute()">Compute Interest</button>
-    <br/>
-    <br/>
-    <span id="result"> </span>
-        
+        <br/>
+        <br/>
+        <footer> Everyone can get rich </footer>
+
+    </div>       
     </body>
-<footer> Everyone can get rich </footer>
+
 </html>
