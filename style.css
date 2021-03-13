@@ -18,7 +18,12 @@
     width:300px; 
     padding:20px; 
     border:25px; 
-    align-items:center; 
-    justify-content:center;
-    
+    text-align:center;
+    margin: auto;     
   }
+
+  .slidecontainer
+  {
+    width: 70%;
+  }
+
