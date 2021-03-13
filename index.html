@@ -1,34 +1,28 @@
-<!DOCTYPE html>
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
-
 <html>
     <head>
+        <!--Linking the style sheet-->
+        <link rel="stylesheet" href="style.css">
         <title> Simple Interest Calculator</title>
     </head>
     
     <body>
-        <div class = "maindiv">
-            
-        <h1>Simple Interest Calculator</h1>
 
-        Amount     <input type="number"  id="principal">  
-            <br/>
-            <br/>
-            
-        Interest Rate        
-        
-        <div class = "rangeslider">
-            <br>
-            0% <input type="range" min="0" max="20" step="0.25" value="10.25" class="myslider" id="sliderRange" onchange="slider()"> 20%
-            <br/>
-            <p>Selected: <span id="out" ></span> % </p>
-        </div>
-        
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+
+            <!-- Getting inputs from the user. Amount = a, No. of Years = b, Interest Rate = c-->
+            Amount: <input type="number" id="a"></br>
             <br/>
             <br/>
 
-            No. of Years         <select id="years">
+            Interest Rate: <div class="slidecontainer">
+                <input type="range" min="1" max="20" value="10.25" step="0.25" class="slider" id="myRange" onchange="findRange()">
+                <span id="demo"></span>% <!--Displays the value the user has selected-->
+            </div>
+            
+            </br>
+            No. of Years:          
+            <select id="b" name="years"> <!--Displays a drop down list for the user to select-->
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -40,20 +34,28 @@
               <option value="9">9</option>
               <option value="10">10</option>
             </select>
-            <br/>
-            <br/>
-               
-            <button onclick="compute()">Compute Interest</button>
-            <br/>
-        <br/>
-
-        <span id="result"> </span>
         
-        <br/>
-        <br/>
-        <footer> Everyone can get rich </footer>
+            </br>
+            </br>
+            
+            <!--Sets to calculate and display the values based on the input-->
+            <input type ="submit" value="Calculate" onclick="compute()">
+            </br></br></br>
 
-    </div>       
+            <!--"mark" highlights the calculated values-->
+            If you deposit <mark><span id="amount"></span></mark>, </br>
+            at an interest rate of <mark><span id="rate"></span>%</mark>, </br>
+            you will receive an amount of <mark><span id="result"></span></mark></br>
+            in the year <mark><span id="futureYear"></mark></span>. 
+
+        </br> </br>
+            <footer> &copy Everyone Can Get Rich</footer>
+
+        </div>
+
     </body>
+   
+    <!--Linking the JS file-->
+    <script src="script.js" async></script>
 
 </html>
